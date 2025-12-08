@@ -1,0 +1,14 @@
+import { use } from 'react';
+import { caseStudies } from '@/lib/case-studies';
+import { CaseStudyClient } from './CaseStudyClient';
+
+export function generateStaticParams() {
+  return caseStudies.map((cs) => ({
+    slug: cs.slug,
+  }));
+}
+
+export default function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
+  return <CaseStudyClient slug={slug} />;
+}
