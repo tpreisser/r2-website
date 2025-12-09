@@ -301,7 +301,7 @@ export function Header() {
               </Link>
 
               {/* Desktop Navigation */}
-              <nav className={styles.desktopNav} style={{ display: 'flex', gap: 8, alignItems: 'center', position: 'relative', zIndex: 20, overflow: 'visible' }}>
+              <nav className={styles.desktopNav} style={{ gap: 8, alignItems: 'center', position: 'relative', zIndex: 20, overflow: 'visible' }}>
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
                   const isDropdownOpen = openDropdown === link.href;
