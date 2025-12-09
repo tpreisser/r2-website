@@ -1,0 +1,14 @@
+# robots.txt for rsquaredai.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rsquaredai.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
+
+# Block common bot spam paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
