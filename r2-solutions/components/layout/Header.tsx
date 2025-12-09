@@ -301,7 +301,7 @@ export function Header() {
               </Link>
 
               {/* Desktop Navigation */}
-              <nav className={styles.desktopNav} style={{ gap: 8, alignItems: 'center', position: 'relative', zIndex: 20, overflow: 'visible' }}>
+              <nav className={styles.desktopNav} style={{ position: 'relative', zIndex: 20, overflow: 'visible' }}>
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
                   const isDropdownOpen = openDropdown === link.href;
@@ -325,8 +325,8 @@ export function Header() {
                         }}
                       >
                         <div
+                          className={styles.navLink}
                           style={{
-                            fontSize: '0.9rem',
                             fontWeight: 500,
                             color: isActive ? accentText : baseText,
                             textDecoration: 'none',
@@ -334,14 +334,9 @@ export function Header() {
                             display: 'flex',
                             alignItems: 'center',
                             gap: 4,
-                            padding: '8px 12px',
                             borderRadius: '8px',
                             cursor: 'default',
                             pointerEvents: 'auto',
-                            userSelect: 'none',
-                            WebkitUserSelect: 'none',
-                            MozUserSelect: 'none',
-                            msUserSelect: 'none',
                           }}
                         >
                           {link.label}
@@ -503,19 +498,14 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      className={styles.navLink}
                       style={{
-                        fontSize: '0.9rem',
                         fontWeight: 500,
                         color: isActive ? accentText : baseText,
                         textDecoration: 'none',
                         transition: 'color 0.2s',
-                        padding: '8px 12px',
                         borderRadius: '8px',
                         cursor: 'pointer',
-                        userSelect: 'none',
-                        WebkitUserSelect: 'none',
-                        MozUserSelect: 'none',
-                        msUserSelect: 'none',
                         position: 'relative',
                         zIndex: 20,
                         pointerEvents: 'auto',
