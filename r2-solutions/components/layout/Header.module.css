@@ -50,13 +50,13 @@
   flex-shrink: 0;
 }
 
-/* Mobile menu button - hidden by default */
+/* Mobile menu button - hidden by default on screens wide enough for nav */
 .mobileMenuBtn {
   display: none !important;
 }
 
-/* Touch devices (phones/tablets) - use pointer and hover detection instead of pixels */
-@media (pointer: coarse) and (hover: none) {
+/* Show hamburger only on narrow screens (under 700px) */
+@media (max-width: 700px) {
   .desktopNav {
     display: none !important;
   }
@@ -69,17 +69,6 @@
 
   .logoImage {
     height: 46px;
-  }
-
-  .mobileMenuBtn {
-    display: flex !important;
-  }
-}
-
-/* Fallback for very narrow screens regardless of input type */
-@media (max-width: 480px) {
-  .desktopNav {
-    display: none !important;
   }
 
   .mobileMenuBtn {
