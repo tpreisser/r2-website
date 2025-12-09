@@ -55,8 +55,8 @@
   display: none !important;
 }
 
-/* Mobile styles - only show hamburger on very small screens (phones) */
-@media (max-width: 480px) {
+/* Touch devices (phones/tablets) - use pointer and hover detection instead of pixels */
+@media (pointer: coarse) and (hover: none) {
   .desktopNav {
     display: none !important;
   }
@@ -69,6 +69,17 @@
 
   .logoImage {
     height: 46px;
+  }
+
+  .mobileMenuBtn {
+    display: flex !important;
+  }
+}
+
+/* Fallback for very narrow screens regardless of input type */
+@media (max-width: 480px) {
+  .desktopNav {
+    display: none !important;
   }
 
   .mobileMenuBtn {
